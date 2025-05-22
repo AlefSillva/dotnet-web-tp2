@@ -1,0 +1,26 @@
+﻿@page
+@model CitiesWebApp.Pages.CityManager.CreateCityModel
+@{
+	ViewData["Title"] = "Create City";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Input.CityName">Nome da Cidade:</label>
+		<input asp-for="Input.CityName" class="form-control" />
+		<span asp-validation-for="Input.CityName" class="text-danger"></span>
+	</div>
+
+	<button type="submit">Enviar</button>
+</form>
+
+@if(!string.IsNullOrEmpty(Model.CityName))
+{
+	<p>Cidade cadastrada: <strong>@Model.CityName</strong></p>
+}
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+
+# Build Folders
+bin/
+obj/
+
+# Rider
+.idea/
+
+# Others
+*.DS_Store
